@@ -1,0 +1,228 @@
+
+/* Body - visibility set to default value of hidden here already */
+/* do NOT change visibility for subsequent elements */
+body {
+    font-family: "HelveticaNeue-Light",
+    "Helvetica Neue Light",
+    "Helvetica Neue",
+    Helvetica, "Muli", 'Trebuchet MS', "Gill Sans","Inter", sans-serif;
+    background-color: #242424;
+    visibility: hidden;
+}
+
+body a{
+    visibility: hidden;
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+@-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+/* toggle the "show" class to hide any elements */
+.show{
+    visibility: visible;
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+}
+
+button.show{
+    visibility: visible;
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+}
+
+h1{
+    font-size: 300%;
+}
+
+h2{
+    color: rgb(177, 177, 177);
+}
+
+/* Styling for the welcome page where you input display name */
+div:not(#lobby, #button-container, #your-role) {
+    /* Use the next four lines to move any div into the middle */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* optional styling below */
+    width: 600px;
+    background-color: #242424;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 10%;
+    box-shadow: 5px 10px rgb(37, 37, 37);
+}
+
+div#button-container{
+    float: left;
+    margin: 30px;
+    padding: 10px;
+}
+
+div#history-display{
+    background-color: antiquewhite;
+    color:black;
+    box-shadow: 0px 0px rgb(37, 37, 37);
+    height: 400px;
+    width: 610px;
+    position: absolute;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+div#your-role{
+    float: top;
+    color: white;
+    font-size: xx-large;
+    position: fixed;
+    left: 50%;
+    padding: 10px;
+    transform: translate(-50%, 0%);
+    z-index: 999;
+}
+
+/* Styling for the list of players to the top right */
+div#lobby {
+
+    /* Positions the div to the top right */
+    float: right;
+    margin-left: 20px;
+    top: 20px;
+    right: 50px;
+
+    /* Optional styling */
+    margin: 30px;
+    padding: 10px;
+    width: 150px;
+    color: white;
+    background-color: gray;
+    border-radius: 3px;
+    box-shadow: 5px 10px rgb(37, 37, 37);
+}
+
+/* Styling for input boxes */
+input {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 180px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+input:focus{
+    width: 280px;
+	border-color: #2ecc71;
+}
+
+input::placeholder{
+    color: white;
+}
+
+
+/* Styling for buttons */
+button {
+    font-family: "HelveticaNeue-Light", 'Trebuchet MS', "Inter", sans-serif;
+    border: 0;
+    background: none;
+    margin: 20px auto;
+    margin-top: 0;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 10px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 20px;
+    visibility: hidden;
+}
+
+button:hover {
+    background: #2ecc71;
+    border-color: #2ecc71;
+}
+
+button#wolf-mayor-reveal-button{
+    background-color: rgb(211, 95, 95);
+    border: none;
+}
+
+button#wolf-reveal-button{
+    background-color: rgb(211, 95, 95);
+    border: none;
+}
+
+#history{
+    background-color: antiquewhite;
+    color: black;
+    border: none;
+}
+
+#see-your-role{
+    background-color: antiquewhite;
+    color: black;
+    border: none;
+}
+
+#history:hover {
+    transform:scale(1.15,1.15);
+    -webkit-transform:scale(1.15,1.15);
+    -moz-transform:scale(1.15,1.15);
+}
+
+#see-your-role:hover {
+    transform:scale(1.15,1.15);
+    -webkit-transform:scale(1.15,1.15);
+    -moz-transform:scale(1.15,1.15);
+}
+
+
+#wolf-mayor-reveal-button:hover {
+    transform:scale(1.15,1.15);
+    -webkit-transform:scale(1.15,1.15);
+    -moz-transform:scale(1.15,1.15);
+}
+
+#wolf-reveal-button:hover {
+    transform:scale(1.15,1.15);
+    -webkit-transform:scale(1.15,1.15);
+    -moz-transform:scale(1.15,1.15);
+}
+
+#chat {
+    height: 200px;
+    overflow-y: auto;
+    border-width: 2px;
+    border-style: solid;
+    border-color:#3498db;
+}
+
+tr.me {
+    color:#1b01ff;
+}
+
+tr.mayor {
+    color: gold;
+}
+
+tr.dead {
+    color:red;
+}
